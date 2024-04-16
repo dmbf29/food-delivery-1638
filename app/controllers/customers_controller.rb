@@ -12,6 +12,7 @@ class CustomersController
     customers = @customer_repository.all
     # give the customers to the view to display
     @customers_view.display(customers)
+    # we'll have an HTML page for this action
   end
 
   def add
@@ -23,5 +24,6 @@ class CustomersController
     customer = Customer.new(name: name, address: address)
     # give the instance to the repository
     @customer_repository.create(customer)
+    # we'll have an HTML page for this action
   end
 end
