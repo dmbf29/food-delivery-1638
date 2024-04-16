@@ -12,6 +12,12 @@ class EmployeeRepository
     @employees
   end
 
+  def all_riders
+    @employees.select do |employee|
+      employee.rider?
+    end
+  end
+
   # @employee_repository.find_by_username('vincent')
   def find_by_username(username)
     @employees.find do |employee|

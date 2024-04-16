@@ -19,6 +19,12 @@ class CustomerRepository
     save_csv
   end
 
+  def find(id)
+    @customers.find do |customer|
+      customer.id == id
+    end
+  end
+
   private
 
   def save_csv
